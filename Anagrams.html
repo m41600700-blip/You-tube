@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function anagrams(s1,s2){
+        if(s1.length!==s2.length){
+            return false;
+        } 
+          const result={};
+        for(let char of s1){
+            if(!result[char]){
+                result[char]=0;
+            }   
+             result[char]=result[char]+1;
+           
+        }
+         const result2={};
+         for(let char of s2){
+            if(!result2[char]){
+                result2[char]=0;
+            }   
+             result2[char]=result2[char]+1;}
+      console.log(result2)
+      console.log(result)
+      return true;
+     
+    }
+
+    console.log(anagrams('sgfugb','gsfbug'))
+    
+   </script>
+
+    
+</body>
+</html>
