@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function RollaDice(sides){
+            return Math.floor(Math.random()*sides)+1
+        }
+        function multiple(number,sides){
+            const result=[]
+            let counter=0
+            while(counter<number){
+                const resultdices=RollaDice(sides);
+                result.push(resultdices)
+                counter++;
+            }
+            return result
+        }
+        const numberdices=prompt("please enter a number of dices")
+        const sidedices=prompt("please enter a sides of dices")
+        console.log(multiple(numberdices,sidedices))
+
+        
+    </script>
+</body>
+</html>

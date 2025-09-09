@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let userchoice=prompt(`Please select one of the below option
+           1. press 1 for Addition;
+           2. press 2 for Subtraction;
+           3. press 3 for Multiplication;
+           4. press 4 for Division:`
+         );
+        userchoice=parseInt(userchoice)
+         switch(userchoice){
+            case 1:
+                console.log("Addition")
+               const inputAddition=acceptnumber()
+                let resultAddition=inputAddition.firstNumber+inputAddition.secondNumber;
+                console.log(`${inputAddition.firstNumber}+${inputAddition.secondNumber}=${resultAddition}`)
+                break;
+            case 2:
+                console.log("Subtraction")
+                 const inputSubtraction=acceptnumber()
+                let Subtractionresult=inputSubtraction.firstNumber-inputSubtraction.secondNumber;
+                console.log(`${inputSubtraction.firstNumber}-${inputSubtraction.secondNumber}=${Subtractionresult}`)
+                 
+                break;
+             case 3:
+                console.log("Multiplication")
+                 const inputMultiplication=acceptnumber()
+                let Multiplicationresult=inputMultiplication.firstNumber*inputMultiplication.secondNumber;
+                console.log(`${inputMultiplication.firstNumber}*${inputMultiplication.secondNumber}=${Multiplicationresult}`)
+                break;
+             case 4:
+                console.log("Division")
+                  const inputDivision=acceptnumber()
+                let Divisionresult=inputDivision.firstNumber/inputDivision.secondNumber;
+                console.log(`${inputDivision.firstNumber}/${inputDivision.secondNumber}=${Divisionresult}`)
+                break; 
+             default:
+                console.log("Wrong choice") 
+                break;         
+
+         }
+          console.log(userchoice)
+          function acceptnumber(){
+             let firstNumber=prompt("please enter the first number");
+                let secondNumber=prompt("please enter the second number");
+                firstNumber=parseInt(firstNumber);
+                secondNumber=parseInt(secondNumber);
+               return{firstNumber,secondNumber}
+
+          }
+    </script>
+</body>
+</html>
