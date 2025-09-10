@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const todoitems=[];
+        let exit=false;
+        while(!exit){
+        let userchoice=prompt(`you have below options
+        1.press 1 to add to do items
+        2.press 2 to see all items
+        3.press 3 to remove an item
+        4.Exit
+        `);
+       
+        userchoice=parseInt(userchoice);
+         console.log(userchoice)
+        switch(userchoice){
+             case 1:
+                console.log("Addition")
+             let useritems=prompt("please enter the to do items")
+             todoitems.push(useritems)
+             console.log(todoitems)
+             break;
+             case 2:
+                printallitems()
+                break;
+             case 3:
+                printallitems()
+                let todelete=prompt("please tell the the item number you wants to delete")
+                todelete=parseInt(todelete)
+                todoitems.splice(todelete-1,1)
+                console.log(todelete)
+
+
+                break;
+                case 4:
+                    exit=true;
+            default:
+                break;
+        }
+        }
+        function printallitems() {
+    let counter = 1;
+    todoitems.forEach(item => {
+        console.log(`${counter}. ${item}`);
+        counter++;
+    });
+}
+console.log("thanks for using to do list app")
+       
+
+    </script>
+
+</body>
+</html>

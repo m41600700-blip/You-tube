@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Rock=1;
+        let Paper=2;
+        let scissor=3;
+        const names={
+            1:"Rock",
+            2:"Paper",
+            3:"Scissor"
+        }
+          let exit=false;
+         let userscore=0;
+        let computerscore=0;
+      
+        while(!exit){
+        let computerchoice=Math.floor(Math.random()*3)+1;
+        let userchoice=prompt(`please select the given this below options 
+        1.press1 for Rock
+        2.press2 for Paper
+        3.press3 for scissor
+        4.press4 for exit`
+    )
+    userchoice=parseInt(userchoice)
+    if(userchoice===4){ 
+        exit=true;
+    }
+    else if(userchoice===computerchoice){
+        console.log("its a tie")
+    }
+    else if((userchoice===Rock&&computerchoice===scissor)||(userchoice===Paper&&computerchoice===Rock)||(userchoice===scissor&&computerchoice===Paper)){
+          userscore++;
+        console.log("you win!!","your choice:",names[userchoice], "computer choice:",names[computerchoice]
+      
+        )
+    }else{
+          computerscore++;
+         console.log("computer win!!","your choice:",names[userchoice], "computer choice:",names[computerchoice])
+    }}
+    
+    console.log("Thanks for plying");
+    console.log("End score is user",userscore,"computer score is",computerscore)
+    </script>
+</body>
+</html>
